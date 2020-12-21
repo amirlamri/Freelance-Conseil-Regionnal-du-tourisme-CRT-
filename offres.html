@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link  href="./style.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRT  Fes-Meknes Conseil Régional du Tourisme (CRT) de Fès </title>
+    <link rel = "shortcut icon" href =  
+    "./images/crtlicon.jpg " 
+            type = "image/x-icon"> 
+</head>
+
+<body>
+   
+    <div class="row desc" >
+    <div class="row" style="margin-bottom:11%" style="z-index:1 !important; ">
+        <div class=" col-md-6   logo  " style="z-index: 1;"> 
+            <a href="https://offres.visitfesmeknes.ma/">    <img src="./images/crtlogo.jpg"   alt="" > </a>
+
+        </div>
+        <div class="col-md-6 col-xs-6" style= " margin-top: 5%; " >
+            <div class="input-group col-md-6 col-6 col-xs-4  ing">
+               
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="row" style="color: white;z-index:1 !important;"> 
+
+        <div class=" col-xl-5 col-md-5 col-12 " >
+            <h4 id="name" > <b> Loren Ipsum   </b> </h4>
+            <h4 id="desc"> <b> Loren Ipsum   </b> </h4>
+            <p id="addr"> Lorem ipsum dolor sit amet consectetur, adipisicing elit
+                 Cumque repellat, vitae similique iure, nam necessitatibus doloremque asperiores quae iusto suscipit nob </p>
+
+        </div>
+        <div class="col-xl-3 col-md-3 col-12" style="z-index: 1;">
+
+            <ul style="  list-style-type: none;">
+                <li class="input-group "><i class="fa fa-phone fa-lg"></i> &nbsp;&nbsp;<h5><a style="color: white !important;" id="phone"></a></h5> </li> 
+                <li class="input-group "><i class="fas fa-globe fa-lg"></i>&nbsp;&nbsp;<h5><a style="color: white !important;"  id="website">Visiter le site</a> </h5> </li>
+                <li class="input-group "><i class="fas fa-envelope fa-lg"></i>&nbsp;&nbsp;<h5 id="email"> CTA</h5> </li>
+            </ul>
+        </div>
+        <div class="col-xl-4 col-md-4 col-12">
+            <iframe     
+    
+            src="https://maps.google.com/maps?q=34.019354,-5.007635+&hl=eng&z=14&amp;output=embed"
+ 
+         
+           >
+           </iframe>
+           <br />
+           <small style="position: inherit;" >
+             <a 
+             id="location"
+       
+              style="color:#0000FF;text-align:left" 
+              target="_blank"
+
+              style="text-decoration: none; overscroll-behavior: unset; "
+             >
+            <h5> 
+                <b style="color: white !important;"  > <i class="fas fa-map-marked-alt"></i>  Click for location  </b> 
+            </h5>   
+             </a>
+           </small>
+                </div>
+       
+    
+
+</div>
+<div class="introdesc gradient">
+    <img src="./images/fes2.jpg" alt="">
+
+</div>
+    
+    </div>
+   
+
+  
+    
+    <div class="row gradient"> 
+        <div class="col-xl-4 col-md-4 col-12" style="height: 50vh;">
+            <div id="element[0]" class="info3">        
+                <button type="button" id="discover[0]"   class="btn btn-outline-light rounded-pill" style="float:inline-end; margin-right: 5%;">Decouvrire...</button>
+
+                
+                 </div> 
+                <img  class="img4" src="./images/epices.jpg"   alt="">
+            
+        </div>
+        <div class="col-xl-4 col-md-4 col-12" style="height: 50vh;">
+            <div id="element[1]" class="info3">        
+                <button type="button" id="discover[1]"   class="btn btn-outline-light rounded-pill" style="float:inline-end; margin-right: 5%;">Decouvrire...</button>
+
+                 </div> 
+                <img  class="img4" src="./images/tissu.jpg"   alt="">
+            
+           
+    </div>
+       <div  class="col-xl-4 col-md-4 col-12" style="height: 50vh;">
+            <div id="element[2]" class="info3">        
+                <button type="button" id="discover[2]"   class="btn btn-outline-light rounded-pill" style="float:inline-end; margin-right: 5%;">Decouvrire...</button>
+
+            </p>
+            
+             </div> 
+            <img  class="img4" src="./images/spajpg.jpg"   alt="">
+        
+        
+            </div>
+     </div>
+
+
+     <script>
+         var page = localStorage.getItem('page');
+ 
+         
+    
+        
+fetch( 'https://offers-api.visitfesmeknes.ma/api/listoffres?token=T29fFvrDZXahEFc7bfNDmAjkxxkGhL3qtCv3smt&perpage=14&page='+page+'&OrderVersion=1,2,3,4'  ,{
+       method:"GET"
+
+
+   }).then( function(res) 
+   {
+        return res.json(); 
+   
+    })
+   .then(function(data){ 
+
+    appendData(data);
+
+
+
+   })
+ 
+   
+         
+   function appendData(data) {
+
+
+ 
+
+    var url = new URL(window.location);
+    var id = url.searchParams.get("id");
+    var name = document.getElementById("name");
+    var desc = document.getElementById("desc");
+    var adr = document.getElementById("addr");
+    var phone = document.getElementById("phone");
+    var website = document.getElementById("website");
+    var email = document.getElementById("email");
+
+    
+
+    name.textContent = data[id]['OperatorsName'];
+    desc.textContent = data[id]['OffresDesc'];
+    adr.textContent = data[id]['OperatorsAdress'];
+    phone.textContent =  data[id]['OperatorsPhone'];
+    website.textContent = ' Visit Website';
+    website.setAttribute("href",data[id]['OperatorsWebsite'] );
+    phone.setAttribute("href","tel:"+data[id]['OperatorsPhone'] );
+
+    email.textContent = data[id]['OperatorsEmail'];
+
+    var localtion = document.getElementById("location");
+    localtion.setAttribute("href","https://maps.google.com/maps?q="+data[id]['OperatorsLat']+","+data[id]['OperatorsLng']+"&hl=es;z=14&amp;output=embed");
+
+       
+
+      
+ 
+ 
+     
+    var i = 0;
+
+
+
+
+    var taille = [0,1,2,3,4,5,6,7,8,9,10,11];
+   var j = 0;
+
+
+    for (let index = 6; index <  data.length ; index++) {
+          
+     
+
+        var num = taille[Math.floor(Math.random() * taille.length)];
+      
+          var mainContainer = document.getElementById("element["+ i++ +"]");
+         
+     
+            var h4 = document.createElement("h4");
+         var p = document.createElement("p");
+         var p2 = document.createElement("p");
+         p2.setAttribute("id",num);
+          h4.style.cssText = " color:white; "
+          p.style.cssText = " color:white; "
+          p2.style.cssText = " color:white; "
+         h4.innerHTML =data[num]['OperatorsName'];
+         p.innerHTML =data[num]['OffresDesc'] + " "+ data[num]['OffresValidity'];
+      
+         mainContainer.appendChild(h4);
+         mainContainer.appendChild(p);
+         mainContainer.appendChild(p2);
+        
+         var btn = document.getElementById("discover["+ j++ +"]");
+         btn.setAttribute("onClick","getoffres("+ num  +");");
+         mainContainer.appendChild(btn);
+        //  btn.setAttribute("style","float:right; position:relative; ");
+            
+         
+         
+             
+  }
+  
+
+
+
+   }
+
+
+   function getoffres(index){
+
+    url = new URL(window.location);
+window.location.replace( url.origin  +'/offres.html?id=' + index);
+
+}
+
+    
+
+     </script>
+
+</body>
+</html>

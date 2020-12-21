@@ -1,0 +1,379 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+body,html{
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    position: relative;
+}
+
+
+header{
+    position: absolute;
+    height: auto;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    
+
+}
+
+.header{
+    position: absolute;
+    height: auto;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: inherit;
+    overflow: hidden;
+
+}
+.desc{
+    position: absolute;
+    height: auto;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: inherit;
+    overflow: hidden;
+
+}
+.descsearch{
+
+    height: auto;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: inherit;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    position: relative;
+
+}
+#map {
+    border: 2px solid #333;
+    width: 80vw;
+    height: 80vh;
+}
+.info{
+    position: absolute;
+    height: auto;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+ 
+    padding: 2%;
+    
+}
+.info2{
+    position: absolute;
+    height: auto;
+    width: 100%;
+    z-index: 100;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    bottom: 0;
+    padding: 2%;
+    border: none;
+}
+.info3{
+    position: absolute;
+    height: auto;
+    width: auto;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+ 
+    padding: 2%;
+
+}
+.img4{
+            
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+
+  
+     
+  }
+.img3{
+            
+      position: relative;       
+    
+         width:100vmax;
+        background-position:center;
+        background-repeat: no-repeat;
+
+        
+    
+       
+    }
+
+    .rowimg3{
+
+        height: 50vh;
+    }
+    .img2{
+        position: relative;
+        height: 100vmin;
+    
+        background-position:center;
+        background-repeat: no-repeat;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        
+
+        
+    }
+    .gradient {
+
+        background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* IE10+ */
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+    }
+
+    .gradient img{
+        position:relative;
+        z-index:-1;
+         display:block;
+   
+    }
+    
+.intro{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    display:inline-block;
+
+    
+}
+.intro img{
+    position: relative;
+    width: 100%;
+    background-position:center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    
+   
+
+
+    
+}
+.introdesc{
+    width: 100%;
+    position: absolute;
+
+}
+.introdesc img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+.imgsearch
+{
+        position: inherit;
+        width: 100%;
+
+}
+
+
+ /*--media*/
+@media screen and (max-width: 1020px) {
+    body,html{
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+     
+    }
+    .logo{
+        text-align: center !important;
+        justify-content: center;
+        display: flex;
+        }
+ 
+    .desc{
+        width: 100%;
+        overflow: initial;
+    
+
+  
+    }
+    iframe {
+        width: 100% !important;
+      
+    }
+
+    .intro{
+        width: 100vmax;
+        height: auto;
+    }
+    .intro img {
+ 
+        width: 100vmax;
+        background-position:center;
+        background-repeat: no-repeat;
+
+    }
+    .introdesc{
+        width: 100vmax;
+        height: 100%;
+    
+    }
+    .introdesc img{
+        position: relative;
+        width: 100vmax;
+        height: 100%;
+        background-position:center;
+        background-repeat: no-repeat;
+    }
+    .col-md-6,.col-md-4,.row,.bloc-1{
+    
+        position: relative;
+        /* width: 100vmax; */
+        height: auto;
+    
+        
+        
+    }
+
+
+    .ing{
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: left;
+    }
+
+    .img3{
+            
+        position: relative;
+        height: 100vmin;
+        width: 100%;
+        background-position:center;
+        background-repeat: no-repeat;
+ 
+  
+          
+      
+         
+      }
+  
+      
+  }
+   /*--media*/
+
+ .col-md-6,.col-md-4,.row,.bloc-1{
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    overflow: hidden;
+    
+    
+    }
+
+
+
+
+iframe {
+  width: 100%;
+  height: 35vh;
+  
+}
+
+
+
+.intro2{
+    width: 50%;
+    height: auto;
+    position: relative;
+ 
+}
+
+.intro2 img{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: auto;
+
+    
+    
+}
+
+.logo{
+text-align: end;
+}
+
+.image-container{
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+}
+
+.test .info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 30px;
+}
+.test img{
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: auto;
+    
+}
+
+.ing{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+

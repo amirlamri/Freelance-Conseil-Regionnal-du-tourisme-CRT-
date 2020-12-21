@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link  href="./style.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRT  Fes-Meknes Conseil Régional du Tourisme (CRT) de Fès </title>
+    <link rel = "shortcut icon" href =  
+    "./images/crtlicon.jpg " 
+            type = "image/x-icon"> 
+</head>
+
+<body id="offre">
+    
+    
+       
+ 
+
+
+       
+
+
+
+
+
+       
+        <script>
+        current = new URL(window.location);
+        var searchkey = current.searchParams.get("searchkey");
+   
+
+   fetch('https://offers-api.visitfesmeknes.ma/api/listoffres?token=T29fFvrDZXahEFc7bfNDmAjkxxkGhL3qtCv3smt&searchkey='+searchkey+'&OrderVersion=1,2,3,4&perpage=100',{
+       method:"GET",
+
+   }).then( function(res) { return res.json();  })
+   
+   
+   .then(function(data){ 
+    
+
+        document.getElementById("offre").innerHTML = `
+${
+
+    
+    data.map(function(offre){
+
+                        return `
+<div class="descsearch">
+            <div class="row" style="margin-bottom:11%">
+                <div class="col-md-6 col-12  logo " style="z-index:1;"> 
+                    <a href="https://offres.visitfesmeknes.ma/">  <img src="./images/crtlogo.jpg"   alt="" > </a>
+        
+                </div>
+                <div class="col-md-6 col-xs-6" style= " margin-top: 5%; " >
+             
+                </div>
+            </div>
+        <div class="row" style="color: white; z-index:1 !important; "> 
+            <div class="col-md-5 col-12" >
+                    <h4 id="name" > <b> ${offre.OperatorsName}   </b> </h4>
+                    <h4 id="desc"> <b>  ${offre.OffresDesc}   </b> </h4>
+                    <p id="addr">  ${offre.OperatorsAdress}  </p>
+
+                    
+        
+            </div>
+            <div class="col-md-4 col-12">
+                <ul style="  list-style-type: none;">
+            <li class="input-group "><i class="fa fa-phone fa-lg"></i> &nbsp;&nbsp;<h5 id="phone" ><a style="color: white !important;" id="phone" href="tel:${offre.OperatorsPhone}"> ${offre.OperatorsPhone}</a></h5> </li> 
+                <li class="input-group "><i class="fas fa-globe fa-lg"></i>&nbsp;&nbsp;<h5><a style="color: white !important;"  id="website" href="${offre.OperatorsWebsite}">Visiter le site</a> </h5> </li>
+                <li class="input-group "><i class="fas fa-envelope fa-lg"></i>&nbsp;&nbsp;<h5 id="email"> ${offre.OperatorsEmail}</h5> </li>
+                </ul>
+            </div>
+                <div class="col-md-3 col-12">
+                    <iframe  src="https://maps.google.com/maps?q=${offre.OperatorsLat},${offre.OperatorsLng}&hl=eng&z=14&amp;output=embed">
+                   </iframe>
+                   <br/>
+                   <small style="position: inherit;" >
+                     <a  id="location" style="color:#0000FF;text-align:left" target="_blank" style="text-decoration: none; overscroll-behavior: unset; "
+                          href="https://maps.google.com/maps?q=${offre.OperatorsLat},${offre.OperatorsLng}&hl=FR;z=14&amp;output=embed">
+                    <h5> 
+                        <b style="color: white !important;"  > <i class="fas fa-map-marked-alt"></i>  Click for location  </b> 
+                    </h5>   
+                     </a>
+                   </small>
+                </div>
+            </div>
+            <div class="introdesc gradient">
+        <img src="./images/fes2.jpg" alt="">
+   
+    </div>
+        </div>
+        
+
+        
+        `}).join('')}`
+   }).catch(error => console.log(error))
+    
+    
+</script>
+ 
+
+
+
+
+    
+</body>
+</html>
